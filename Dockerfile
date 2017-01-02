@@ -1,5 +1,6 @@
-FROM ubuntu:14.04
-RUN apt-get update -q && apt-get install -y gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux ganglia-monitor-python vim rrdtool rrdcached
+FROM ubuntu:16.04
+
+RUN apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux ganglia-monitor-python vim rrdtool rrdcached
 
 #mountpoints for rrd- and config files
 VOLUME /var/lib/ganglia
