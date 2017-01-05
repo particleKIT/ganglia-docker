@@ -11,10 +11,6 @@ usermod -aG www-data nobody
 export RRDCACHED_ADDRESS=unix:/tmp/rrdcached.sock
 echo '<?php $conf["rrdcached_socket"] = "unix:/tmp/rrdcached.sock"; ?>' > /etc/ganglia-webfrontend/conf.php
 
-#german timezone
-echo "Europe/Berlin" | tee /etc/timezone
-dpkg-reconfigure --frontend noninteractive tzdata
-
 #restart apache
 service apache2 restart
 
