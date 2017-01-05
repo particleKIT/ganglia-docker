@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 
-RUN apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux ganglia-monitor-python vim rrdtool rrdcached
+RUN apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux \
+    ganglia-monitor-python vim rrdtool rrdcached
 
 RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime &&\
     dpkg-reconfigure -f noninteractive tzdata
