@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux \
