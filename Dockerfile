@@ -13,6 +13,8 @@ VOLUME /var/lib/ganglia
 VOLUME /etc/ganglia
 VOLUME /etc/apache2
 
+ENV FIXPERMISSIONS=false
+
 #startscript
 ADD init.sh init.sh
 

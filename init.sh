@@ -4,7 +4,9 @@
 mkdir -p /var/lib/ganglia/rrds
 
 #ganglia and rrdcached run as user nobody
-chown -R nobody /var/lib/ganglia/rrds
+if [ "$FIXPERMISSION" = true ]; then
+    chown -R nobody /var/lib/ganglia/rrds
+fi
 usermod -aG www-data nobody
 
 #rrd-socketfile
