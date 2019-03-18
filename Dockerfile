@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux \
+    php-rrd gmetad ganglia-webfrontend ganglia-monitor ganglia-modules-linux \
     ganglia-monitor-python rrdtool rrdcached
 
 # german timezone
